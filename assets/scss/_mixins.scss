@@ -1,0 +1,47 @@
+@import "vars";
+
+@mixin breakpoint($point) {
+  @if $point == desktop {
+    @media (min-width: 1120px) { @content ; }
+  }
+  @else if $point == laptop {
+    @media (min-width: 64em) { @content ; }
+  }
+  @else if $point == tablet {
+    @media (min-width: 1024px) { @content ; }
+  }
+  @else if $point == phablet {
+    @media (min-width: 600px)  { @content ; }
+  }
+  @else if $point == mobileonly {
+    @media (max-width: 600px )  { @content ; }
+
+  }
+}
+
+@mixin size($width, $height: $width){
+  width: $width;
+  height: $height;
+}
+
+@mixin font($font-size: 16px, $font-family: 'Source Sans Pro', $font-weight: normal, $color: #000) {
+  font-size: $font-size;
+  font-family: $font-family, sans-serif;
+  font-weight: $font-weight;
+  color: $color;
+}
+
+@mixin list_reset(){
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+
+@function rgba_color($color, $opacity){
+  @if($color == 'black'){
+    @return rgba(0,0,0, $opacity)
+  }@else if($color == 'white'){
+    @return rgba(255,255,255, $opacity);
+  }
+}
