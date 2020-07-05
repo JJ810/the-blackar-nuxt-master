@@ -13,7 +13,8 @@ async function start() {
   const nuxt = new Nuxt(config);
 
   const { host, port } = nuxt.options.server;
-
+  
+  console.log("This is pull");
   // Build only in dev mode
   if (config.dev) {
     const builder = new Builder(nuxt);
