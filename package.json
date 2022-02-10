@@ -30,7 +30,7 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "^24.1.0",
     "jest": "^24.1.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "nodemon": "^1.18.9",
     "sass-loader": "^8.0.0",
     "stylus": "^0.54.5",
